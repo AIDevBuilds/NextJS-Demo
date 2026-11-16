@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js GraphQL demo
 
-## Getting Started
+Next.js 14 (App Router) with a GraphQL API and client in the same app.
 
-First, run the development server:
+## What it contains
 
-```bash
+- `src/app/api/graphql/route.ts`: Apollo Server (`apollo-server-micro`) with a `hello` query
+- `src/app/lib/apolloClient.ts` and `src/app/lib/queries.ts`: Apollo Client and the `GET_HELLO` query
+- `src/app/dashboard/page.tsx`: a dashboard page
+- Tailwind CSS for styling
+
+## Stack
+
+Next.js 14.2.4, React 18, `@apollo/client` 3.10, `apollo-server-micro` 3.13, GraphQL 16, Tailwind CSS.
+
+## Run
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The GraphQL endpoint is `/api/graphql`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT. See [LICENSE](LICENSE).
